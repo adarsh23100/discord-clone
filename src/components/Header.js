@@ -5,7 +5,7 @@ function Header() {
   return (
     <header className="flex items-center justify-between py-4 px-6 bg-discord_blue">
         <a href="/">
-            <img href="https://rb.gy/it5msp" alt="" className="w-32 h-12 object-contain" />
+            <img src="logo.png" alt="" className="w-32 h-12 object-contain" />
         </a>
         <div className="hidden lg:flex space-x-6 text-white">
             <a className="link">Download</a>
