@@ -2,12 +2,15 @@ import './App.css';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Home from './components/Home';
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<><Header /><Hero /></>} />
+        <Route path="/channels" element={<><Home /></>} />
+        <Route path="/channels/:id" element={<><Home /></>} />
       </Routes>
     </Router>
   );
