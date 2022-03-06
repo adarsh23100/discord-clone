@@ -10,9 +10,12 @@ module.exports = {
         discord_purple: "#5865f2",
         discord_green: "#3ba55c",
         discord_serverbg: "#36393f",
-        discord_serversBg: "#202225"
+        discord_serversBg: "#202225",
+        discord_channelsBg: "#2f3136"
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar-hide')
+  ],
 }
