@@ -13,7 +13,7 @@ function Channel({ id,channelName }) {
             channelId: id,
             channelName: channelName,
         }));
-        navigate.push(`/channels/${id}`);
+        navigate(`/channels/${id}`);
     };
 
   return (

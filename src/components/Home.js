@@ -1,4 +1,4 @@
-import { ChevronDownIcon, PlusIcon } from '@heroicons/react/outline';
+import { ChevronDownIcon, CogIcon, MicrophoneIcon, PhoneIcon, PlusIcon } from '@heroicons/react/solid';
 import React from 'react'
 import { useAuthState } from 'react-firebase-hooks/auth'
 import { Navigate } from 'react-router-dom';
@@ -6,6 +6,7 @@ import { auth,db } from '../firebase'
 import Channel from './Channel';
 import ServerIcon from './ServerIcon';
 import { useCollection } from 'react-firebase-hooks/firestore'
+import Chat from './Chat';
 
 function Home() {
     const [user] = useAuthState(auth);
@@ -58,6 +59,29 @@ function Home() {
                         ))}
                     </div>
                 </div>
+                <div className="bg-[#292b2f] p-2 flex justify-between items-center space-x-8">
+                    <div className="flex items-center space-x-1">
+                        <img src={user?.photoURL} alt="" className="h-10 rounded-full" onClick={() => auth.signOut()} />
+                        <h4 className="text-white text-xs font-medium">
+                            {user?.displayName}
+                            <span className="text-[#b9bbbe] block">#{user?.uid.substring(0,4)}</span>
+                        </h4>
+                    </div>
+                    <div className="text-gray-400 flex items-center">
+                        <div className="hover:bg-[#3a3c43] p-2 rounded-md">
+                            <MicrophoneIcon className="h-5 icon"/>
+                        </div>
+                        <div className="hover:bg-[#3a3c43] p-2 rounded-md">
+                            <PhoneIcon className="h-5 icon"/>
+                        </div>
+                        <div className="hover:bg-[#3a3c43] p-2 rounded-md">
+                            <CogIcon className="h-5 icon"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="bg-[#36393f] flex-grow">
+                <Chat />
             </div>
         </div>
     </>
