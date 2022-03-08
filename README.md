@@ -1,5 +1,8 @@
 # Discord Clone using React JS and Tailwind CSS
 
+## Created using React JS , Tailwind CSS and Firebase.
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
